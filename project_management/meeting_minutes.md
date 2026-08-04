@@ -102,3 +102,77 @@ The Seoul Bike Sharing dataset was later checked and no missing values were foun
 * Check missing values, duplicates, and categorical variables in the parallel dataset.
 * Remove any variables that may result in target leakage.
 * Prepare both datasets for train-test splitting, scaling, and cross-validation.
+
+
+
+
+# Meeting 3 Minutes
+
+## Meeting Information
+
+**Date:** 17/07/26  
+**Supervisor:** Jose Paredes  
+**Student Name:** Anush Goud Akula  
+**Project Title:** Predicting Urban Bike Sharing Demand Using Weather, Seasonal, and Calendar-Based Machine Learning Features  
+
+## Project Discussion
+
+The meeting focused on improving the evaluation stage of the bike-sharing demand prediction project. The supervisor suggested extending the project by using a parallel bike-sharing dataset in addition to the main Seoul Bike Sharing Demand dataset.
+
+The purpose of using a parallel dataset is to check whether the machine learning workflow developed for the Seoul dataset can also perform effectively on another city’s bike-sharing data. This would strengthen the project by showing that the modelling approach is not limited only to one dataset.
+
+The supervisor advised that the parallel dataset should be tested using the developed machine learning models. The performance of the models on the new dataset should then be analysed and discussed clearly, regardless of whether the results are strong or weak.
+
+## Parallel Dataset Discussion
+
+The Washington D.C. Bike Sharing Dataset was selected as the parallel dataset because it contains hourly bike rental demand records and includes time, calendar and weather-related variables. This makes it suitable for comparison with the Seoul Bike Sharing Demand dataset.
+
+The supervisor suggested that the project should include:
+
+1. Cross-validation using the parallel dataset.
+2. A separate modelling study using the parallel dataset.
+3. A clear comparison of how the developed models perform on both datasets.
+4. A proper explanation of the results, even if the model performance differs between the datasets.
+
+## Agreed Actions
+
+1. Select a suitable parallel bike-sharing dataset.
+2. Use the Washington D.C. Bike Sharing Dataset as the parallel dataset.
+3. Inspect the dataset structure, columns and target variable.
+4. Identify comparable features between the Seoul and Washington D.C. datasets.
+5. Remove any columns that could cause target leakage.
+6. Preprocess the parallel dataset separately.
+7. Apply the same machine learning models used for the Seoul dataset.
+8. Evaluate model performance using MAE, RMSE and R² score.
+9. Perform cross-validation on the Washington D.C. dataset.
+10. Compare the model results between Seoul and Washington D.C.
+11. Explain the findings clearly in the Results and Evaluation chapter.
+12. Update GitHub with the new dataset work, results, figures and meeting minutes.
+
+## Work Completed After the Meeting
+
+- The Washington D.C. Bike Sharing Dataset was selected as the parallel dataset.
+- The dataset was downloaded and loaded into the notebook.
+- Dataset columns, missing values and duplicate records were checked.
+- No missing values or duplicate records were found.
+- Leakage columns such as `casual` and `registered` were removed because they directly contribute to the target variable.
+- Date-based features were created.
+- Weekend and peak-hour indicators were created.
+- Categorical columns were encoded.
+- The same models were applied: Linear Regression, Random Forest, Gradient Boosting and XGBoost.
+- Model evaluation was completed using MAE, RMSE and R² score.
+- K-Fold cross-validation and time-series cross-validation were completed.
+- Feature-importance analysis was completed.
+- Seoul and Washington D.C. results were compared.
+- A final comparative dashboard was created.
+
+## Tasks for the Next Week
+
+- Finalise the Washington D.C. parallel dataset results.
+- Save all result tables and figures.
+- Upload the updated notebook and output files to GitHub.
+- Update the methodology chapter to include the parallel dataset workflow.
+- Write the Results and Evaluation chapter using the Seoul and Washington D.C. outputs.
+- Include the final comparative dashboard in the report.
+- Explain clearly that RMSE values should not be directly compared across datasets because the rental-count scales are different.
+- Use R² score as the safer high-level metric for comparing both datasets.
