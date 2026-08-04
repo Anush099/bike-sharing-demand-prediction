@@ -1,11 +1,12 @@
 
-
 Dataset Details
+===============
 
 Project Title:
 Predicting Urban Bike Sharing Demand Using Weather, Seasonal, and Calendar-Based Machine Learning Features
 
-This project uses two publicly available bike-sharing datasets. The Seoul Bike Sharing Demand dataset is used as the main dataset for model development, while the Washington D.C. Bike Sharing dataset is used as a parallel dataset for comparison and validation.
+This file provides brief details of the datasets used in this MSc dissertation project. Two publicly available bike-sharing datasets were used. The Seoul Bike Sharing Demand dataset was used as the primary dataset for the main machine learning implementation. The Washington D.C. Bike Sharing dataset was used as a parallel dataset to compare and validate the developed modelling workflow.
+
 
 ------------------------------------------------------------
 1. Primary Dataset: Seoul Bike Sharing Demand Dataset
@@ -21,7 +22,7 @@ Dataset Link:
 https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand
 
 Description:
-The Seoul Bike Sharing Demand dataset contains hourly bike rental records from the Seoul bike-sharing system. It includes weather, seasonal, holiday and operational information that can be used to predict hourly bike rental demand.
+The Seoul Bike Sharing Demand dataset contains hourly bike rental records from the Seoul bike-sharing system. The dataset includes weather, seasonal, holiday and operational information that can be used to predict hourly bike rental demand.
 
 Main Target Variable:
 Rented Bike Count
@@ -41,8 +42,8 @@ Main Features:
 - Holiday
 - Functioning Day
 
-Use in Project:
-This dataset was used as the main dataset for preprocessing, exploratory data analysis, feature engineering, model training, model evaluation, cross-validation, feature-importance analysis and ablation testing.
+Use in This Project:
+This dataset was used as the main dataset for data preprocessing, exploratory data analysis, feature engineering, model training, model evaluation, cross-validation, time-series validation, feature-importance analysis and ablation testing.
 
 Models Applied:
 - Linear Regression
@@ -58,6 +59,7 @@ MAE = 94.535
 RMSE = 161.006
 R2 Score = 0.938
 
+
 ------------------------------------------------------------
 2. Parallel Dataset: Washington D.C. Bike Sharing Dataset
 ------------------------------------------------------------
@@ -72,12 +74,12 @@ Dataset Link:
 https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset
 
 Description:
-The Washington D.C. Bike Sharing dataset contains hourly rental records from the Capital Bikeshare system. It includes time, calendar and weather-related variables that are useful for bike-sharing demand prediction.
+The Washington D.C. Bike Sharing dataset contains hourly bike rental records from the Capital Bikeshare system. The dataset includes time, calendar and weather-related variables that are useful for bike-sharing demand prediction.
 
 Main Target Variable:
 cnt
 
-Renamed Target Variable in Project:
+Renamed Target Variable in This Project:
 Rented_Bike_Count
 
 Main Features:
@@ -96,10 +98,10 @@ Main Features:
 - Wind speed
 
 Important Preprocessing Note:
-The columns casual and registered were removed because they directly contribute to the target variable cnt. Keeping these columns would cause target leakage.
+The columns casual and registered were removed before modelling because they directly contribute to the target variable cnt. Keeping these columns would cause target leakage and produce unrealistic model performance.
 
-Use in Project:
-This dataset was used as a parallel dataset to test whether the machine learning workflow developed on the Seoul dataset could also perform effectively on another city’s bike-sharing data.
+Use in This Project:
+This dataset was used as a parallel dataset to test whether the machine learning workflow developed using the Seoul dataset could also perform effectively on another city’s bike-sharing data.
 
 Models Applied:
 - Linear Regression
@@ -115,6 +117,7 @@ MAE = 25.717
 RMSE = 40.549
 R2 Score = 0.948
 
+
 ------------------------------------------------------------
 3. Purpose of Using Two Datasets
 ------------------------------------------------------------
@@ -126,7 +129,8 @@ The purpose of using the second dataset was to:
 - compare model performance across two datasets;
 - perform additional cross-validation;
 - strengthen the reliability of the project findings;
-- show that the modelling approach is not limited to only one dataset.
+- show that the modelling approach is not limited to one dataset only.
+
 
 ------------------------------------------------------------
 4. Final Note
